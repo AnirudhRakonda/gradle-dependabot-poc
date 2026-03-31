@@ -1,10 +1,9 @@
+version: 2
 updates:
-  # Gradle dependencies
   - package-ecosystem: "gradle"
     directory: "/"
     schedule:
       interval: "weekly"
-      day: "monday"
     open-pull-requests-limit: 10
     labels:
       - "dependencies"
@@ -21,12 +20,10 @@ updates:
         patterns:
           - "org.testcontainers*"
 
-  # GitHub Actions versions
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
-      day: "monday"
     labels:
       - "dependencies"
       - "github-actions"
