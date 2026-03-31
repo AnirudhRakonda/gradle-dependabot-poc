@@ -1,0 +1,32 @@
+updates:
+  # Gradle dependencies
+  - package-ecosystem: "gradle"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "gradle"
+    groups:
+      spring-boot:
+        patterns:
+          - "org.springframework.boot*"
+          - "io.spring*"
+      webjars:
+        patterns:
+          - "org.webjars*"
+      testcontainers:
+        patterns:
+          - "org.testcontainers*"
+
+  # GitHub Actions versions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    labels:
+      - "dependencies"
+      - "github-actions"
